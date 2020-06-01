@@ -1,8 +1,7 @@
 .collection-item {
     display: grid;
     margin: 0.5rem 0;
-    grid-column: center-start / center-end;
-    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 2rem 2rem;
 
     .container {
