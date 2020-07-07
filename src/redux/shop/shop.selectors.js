@@ -1,10 +1,10 @@
 import { createSelector} from 'reselect';
 
 const COLLECTION_ID_MAP = {
-    jordan: 1,
-    luxurius: 2,
-    nike: 3,
-    adidas: 4
+    jordan: 'jordan',
+    luxurius: 'luxurius',
+    nike: 'nike',
+    adidas: 'adidas'
 }
 
 const selectShop = state => state.shop;
@@ -17,5 +17,5 @@ export const selectShopItems = createSelector(
 export const selectCategory = categoryUrlParam => 
     createSelector(
         [selectShopItems],
-        collections => collections.find(collection => collection.id === COLLECTION_ID_MAP[categoryUrlParam] )
+        collections => collections.find(collection => collection.slug === COLLECTION_ID_MAP[categoryUrlParam] )
     )
